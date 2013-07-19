@@ -11,7 +11,7 @@ class InvalidHeader(Exception):
         super(InvalidHeader, self).__init__(header)
 
 class Device(object):
-    _SERIAL_MAX= 50
+    _SERIAL_MAX = 50
     _SERIAL_PING_TIMEOUT = 0.1
     _SERIAL_TIMEOUT = 1
     _SERIAL_BAUDRATE = 115200

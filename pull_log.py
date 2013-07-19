@@ -1,10 +1,10 @@
-import os
 from device import Device, DeviceNotFoundError
 
 def pull_log():
     with Device() as device:
-        print device
-        print device.pull_log()
+        records = device.pull_log()
+        for record in records:
+            print record, record.serialize()
 
 def main():
     try:
