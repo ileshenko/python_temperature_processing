@@ -4,6 +4,7 @@ from device import Device, DeviceNotFoundError
 def pull_log():
     with Device() as device:
         print device
+        print device.pull_log()
 
 def main():
     try:
