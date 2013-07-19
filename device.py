@@ -19,8 +19,9 @@ class Device(object):
     def __init__(self):
         super(Device, self).__init__()
         self._socket = None
-
         self._find_device()
+
+        print 'Found device on {0}'.format(self._socket.name)
 
     def pull_log(self):
         reader = self._get_log_line()
