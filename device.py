@@ -38,7 +38,7 @@ class Device(object):
         return records
 
     def clear_log(self):
-        pass
+        self._socket.write('c')
 
     def __enter__(self):
         return self
