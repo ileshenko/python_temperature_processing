@@ -1,14 +1,15 @@
 from device import Device, DeviceNotFoundError
 
-def pull_log():
+def pull_log(filename):
     with Device() as device:
         records = device.pull_log()
-        for record in records:
-            print record, record.serialize()
+        with open(filename, 'a') as output_file:
+            for record in records:
+                output_file.write(record.serialize() + '\n')
 
 def main():
     try:
-        log = pull_log()
+        log = pull_log('output.log')
     except DeviceNotFoundError:
         print 'Device not found'
 
