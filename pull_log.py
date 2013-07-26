@@ -10,7 +10,7 @@ def pull_log(filename):
             for record in records:
                 output_file.write(record.serialize() + '\n')
 
-        # device.clear_log()
+        device.clear_log()
 
 def main():
     try:

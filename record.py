@@ -10,7 +10,7 @@ class Record(object):
 
     def serialize(self):
         timestamp = int(time.mktime(self.time.timetuple()))
-        return '{0} {1}'.format(timestamp, self.temperature)
+        return '{0}\t{1}'.format(timestamp, self.temperature)
 
     def __lt__(self, other):
         return self.time < other.time
