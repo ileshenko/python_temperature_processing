@@ -19,6 +19,7 @@ def main():
         print 'Device not found'
     except IOError, error:
         print error
-
+    raw_input('Press Any Key to continue')
+    
 if __name__ == '__main__':
     main()
